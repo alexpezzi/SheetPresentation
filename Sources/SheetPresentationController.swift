@@ -225,11 +225,7 @@ class SheetPresentationController: UIPresentationController {
             margins = containerView.layoutMargins
         }
         else if let presentedView = context.view(forKey: .to) {
-            if #available(iOS 11.0, macCatalyst 10.15, *) {
-                margins = presentedView.safeAreaInsets
-            } else {
-                margins = presentedView.layoutMargins
-            }
+            margins = presentedView.safeAreaInsets
         }
         else {
             margins = .zero

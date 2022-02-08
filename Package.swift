@@ -5,7 +5,7 @@ let package = Package(
     name: "SheetPresentation",
     platforms: [
         .macOS(.v10_15),
-        .iOS(.v10)
+        .iOS(.v11)
     ],
     products: [
         .library(name: "SheetPresentation",

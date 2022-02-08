@@ -14,7 +14,7 @@ A UIPresentationController and attendant classes for iOS to present a view contr
 
   s.author       = { "Jeff Kelley" => "SlaunchaMan@gmail.com" }
 
-  s.platform     = :ios, '10'
+  s.platform     = :ios, '11'
 
   s.source       = {
     :git => "https://github.com/Detroit-Labs/SheetPresentation.git",

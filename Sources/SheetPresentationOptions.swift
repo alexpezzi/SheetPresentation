@@ -19,7 +19,6 @@ public struct SheetPresentationOptions {
         case roundAllCorners(radius: CGFloat)
 
         /// Rounds the corners specified in `corners` by the given `radius`.
-        @available(iOS 11.0, macCatalyst 10.15, *)
         case roundSomeCorners(radius: CGFloat, corners: CACornerMask)
 
         /// Does not round corners.
@@ -104,18 +103,12 @@ extension SheetPresentationOptions.CornerOptions {
         case .roundAllCorners(radius: let radius):
             view.layer.cornerRadius = radius
             view.clipsToBounds = true
-
-            if #available(iOS 11.0, macCatalyst 10.15, *) {
-                view.layer.maskedCorners = .all
-            }
+			view.layer.maskedCorners = .all
 
         case let .roundSomeCorners(radius: radius, corners: corners):
             view.layer.cornerRadius = radius
             view.clipsToBounds = true
-
-            if #available(iOS 11.0, macCatalyst 10.15, *) {
-                view.layer.maskedCorners = corners
-            }
+			view.layer.maskedCorners = corners
 
         case .none:
             view.layer.cornerRadius = 0

@@ -15,7 +15,6 @@ public protocol DirectionalEdgeInsetsConvertible {
     /// - Parameter traitCollection: The trait collection relative to which the
     ///                              direction is computed, using its
     ///                              `layoutDirection` property.
-    @available(iOS 11.0, macCatalyst 10.15, *)
     func directionalEdgeInsets(
         for traitCollection: UITraitCollection?
     ) -> NSDirectionalEdgeInsets
@@ -43,7 +42,6 @@ public func == (_ lhs: DirectionalEdgeInsetsConvertible,
         rhs.fixedEdgeInsets(for: nil)
 }
 
-@available(iOS 11.0, macCatalyst 10.15, *)
 extension NSDirectionalEdgeInsets: DirectionalEdgeInsetsConvertible {
 
     public func directionalEdgeInsets(
@@ -73,7 +71,6 @@ extension NSDirectionalEdgeInsets: DirectionalEdgeInsetsConvertible {
 
 extension UIEdgeInsets: DirectionalEdgeInsetsConvertible {
 
-    @available(iOS 11.0, macCatalyst 10.15, *)
     public func directionalEdgeInsets(
         for traitCollection: UITraitCollection?
     ) -> NSDirectionalEdgeInsets {
